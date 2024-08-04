@@ -7,10 +7,7 @@ import java.io.InputStreamReader;
 public class FibonacciChamadas {
     static int calls = 0;
     public static void main(String[] args) throws IOException {
-
-
         BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-
         int times = Integer.parseInt(bf.readLine());
 
         for (int i = 0; i < times; i++) {
@@ -22,7 +19,6 @@ public class FibonacciChamadas {
         }
 
     }
-
     static int fib(int n){
         if(n == 0){
             calls++;
