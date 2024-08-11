@@ -16,12 +16,16 @@ public class TipoDeTriangulo {
 
         for (int i = 1; i < entries.length; i++) {
             if (entries[i] > entries[pMaior]) {
-                pOutro2 = pOutro1;
-                pOutro1 = pMaior;
                 pMaior = i;
-            } else if (pOutro1 == -1) {
+            }
+        }
+        boolean aux = true;
+        for (int i = 0; i < entries.length; i++) {
+            if(pMaior != i && aux){
                 pOutro1 = i;
-            } else if (pOutro2 == -1) {
+                aux = false;
+            }
+            if(pMaior != i && !aux){
                 pOutro2 = i;
             }
         }
